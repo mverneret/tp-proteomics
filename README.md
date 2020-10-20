@@ -154,10 +154,10 @@ Que permettent les méthodes suivantes?
 ###### df.shape
 ```
 ```
-###### df.head
+###### df.head()
 ```
 ```
-###### df.tail
+###### df.tail()
 ```
 ```
 ###### df.columns
@@ -169,7 +169,10 @@ Que permettent les méthodes suivantes?
 ###### df.info
 ```
 ```
-###### df.describe
+###### df.describe()
+```
+```
+###### df.dropna()
 ```
 ```
 
@@ -227,7 +230,7 @@ La méthode `loc` permet de selectionner toutes les lignes/colonnes respectant c
 * Contraintes de valeurs continues
 
 ```python
-df.loc[(df['-LOG10 Adj.P-val'] < 0 )  & (df['Log2 Corrected Abundance Ratio'] > 0.0 ) ]
+df.loc[(df['-LOG10 Adj.P-val'] > 0 )  & (df['Log2 Corrected Abundance Ratio'] > 0.0 ) ]
 ```
 
 * Contraintes de valeurs discrètes
