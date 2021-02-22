@@ -1,4 +1,4 @@
-# tp-proteomics
+# TP de Protéomique LYON@BioInfo 2021
 ## Contexte Biologique
 Vous allez utiliser des outils informatiques qui vous permettront d’analyser des données brutes issues d’une analyse Shotgun Proteomics récemment publiée dans le journal Science sous le titre "Real-time visualization of drug resistance acquisition by horizontal gene transfer reveals a new role for AcrAB-TolC multidrug efflux pump".
 
@@ -28,6 +28,19 @@ Depuis le repertoire de votre repository Git, installez le package scipy et lanc
 $PATH_TO_CONDA_DIR/bin/conda install -c conda-forge scipy notebook
 $PATH_TO_CONDA_DIR/bin/jupyter notebook
 ```
+
+#### Procédure virtualenv
+
+Créer l'environnement virtuel.
+
+```python -m venv MADP_TP1```
+
+Activer l'environnement virtuel et installer les packages.
+
+```
+source MADP_TP1/bin/activate.sh
+pip install --user ipykernel scipy notebook
+```
 #### Procédure VM IFB
 
 Une "appliance" IFB a été préparée avec les dépendances Python requises.
@@ -35,13 +48,19 @@ Elle est accessible [ici](https://biosphere.france-bioinformatique.fr/catalogue/
 Jupyter vous permettra d'ouvrir des terminaux SHELL et des notebook Python.
 Le repertoire racine de Jupyter est `/mnt/mydatalocal/`
 
-#### Procédure virtualenv
 
-N/A
+#### Intégration des environnements au notebook
+
+Il peut être pratique d'ajouter votre environnement à Jupyter. Cela se réalise depuis l'environnement (conda ou venv) activé.
+
+```
+python -m ipykernel install --user --name=MADP_TP1
+```
+
 
 Jupyter est une environnement de type notebook permettant l'execution de code python dans des cellules avec une persitance des variables entre chaque evaluation de cellule. Jupyter fournit nativement le support de la librarie graphique matplotlib.
 
-#### Test de l'installation
+### Test de l'installation
 
 Dans l'inteface de jupyter, créez un nouveau fichier notebook (*.ipynb) localisé dans votre repertoire git.
 Dans la première cellule copiez le code suivant:
